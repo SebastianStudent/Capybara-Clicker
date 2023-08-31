@@ -30,7 +30,8 @@ namespace CapybaraClicker
         {
             Application.Current.Dispatcher.Invoke(() =>
             {
-                _menuSoundPath = MenuSoundPath();
+                _menuSoundPath = SoundsPath("The Capybara Song Official Music Video.wav");
+                //MessageBox.Show(_menuSoundPath);
                 if (!File.Exists(Path.GetFullPath(_menuSoundPath)))
                 {
                     MessageBox.Show("Music doesn't exist.\n" +
@@ -63,7 +64,7 @@ namespace CapybaraClicker
 
         public static void ClickSound()
         {
-            _clickSoundPath = EffectSound_Bonk_Path();
+            _clickSoundPath = SoundsPath("Bonk.wav");
             if (!File.Exists(Path.GetFullPath(_clickSoundPath)))
             {
                 MessageBox.Show("Music doesn't exist.\n" +
@@ -87,7 +88,7 @@ namespace CapybaraClicker
 
         public static void CashSound()
         {
-            _cashSoundPath = EffectSound_Cash_Path();
+            _cashSoundPath = SoundsPath("Cash money.wav");
             if (!File.Exists(Path.GetFullPath(_cashSoundPath)))
             {
                 MessageBox.Show("Music doesn't exist.\n" +
@@ -109,39 +110,152 @@ namespace CapybaraClicker
             }
         }
 
-        private static StringBuilder SoundsPath([CallerFilePath] string SoundBoardPath = "")
+        private static string SoundsPath(string filename/*[CallerFilePath] string SoundBoardPath = ""*/)
         {
-            StringBuilder searchPath = new StringBuilder(SoundBoardPath);
-            string fileName = Path.GetFileName(searchPath.ToString());
-            searchPath.Remove(searchPath.Length - fileName.Length - 1,
-                fileName.Length + 1);
-            searchPath.Remove(Path.GetDirectoryName(searchPath.ToString()).Length,
-                searchPath.Length - Path.GetDirectoryName(searchPath.ToString()).Length);
-            return searchPath;
+            //StringBuilder searchPath = new StringBuilder(SoundBoardPath);
+            //string fileName = Path.GetFileName(searchPath.ToString());
+            //searchPath.Remove(searchPath.Length - fileName.Length - 1,
+            //    fileName.Length + 1);
+            //searchPath.Remove(Path.GetDirectoryName(searchPath.ToString()).Length,
+            //    searchPath.Length - Path.GetDirectoryName(searchPath.ToString()).Length);
+
+            //string fileNameToSearch = "Cash money.wav";
+            //string[] allDrives = Directory.GetLogicalDrives();
+            //foreach (string drive in allDrives)
+            //{
+            //    try
+            //    {
+            //        string[] files = Directory.GetFiles(drive, fileNameToSearch, SearchOption.AllDirectories);
+
+            //        if (files.Length > 0)
+            //        {
+            //            string filePath = files[0];
+            //            MessageBox.Show("Znaleziono plik: " + filePath);
+            //            break;
+            //        }
+            //    }
+            //    catch (UnauthorizedAccessException)
+            //    {
+            //        continue;
+            //    }
+            //}
+            string targetFileName = filename;
+            string[] drives = Environment.GetLogicalDrives();
+            string filepath = "";
+
+            foreach (string drive in drives)
+            {
+                try
+                {
+                    string rootPath = Path.GetPathRoot(drive);
+                    string[] files = Directory.GetFiles(rootPath, targetFileName, SearchOption.AllDirectories);
+
+                    foreach (string file in files)
+                    {
+                        MessageBox.Show("Znaleziono plik: " + file);
+                        filepath = file;
+                    }
+                }
+                catch (UnauthorizedAccessException)
+                {
+
+                }
+            }
+            return filepath;
         }
 
         private static string MenuSoundPath()
         {
-            string menuSoundPath = "\\Sounds\\The Capybara Song Official Music Video.wav";
-            StringBuilder searchPath = SoundsPath();
-            searchPath.Append(menuSoundPath);
-            return searchPath.ToString();
+            //string menuSoundPath = "\\Sounds\\The Capybara Song Official Music Video.wav";
+            //StringBuilder searchPath = SoundsPath();
+            //searchPath.Append(menuSoundPath);
+            //return searchPath.ToString();
+            string targetFileName = "The Capybara Song Official Music Video.wav";
+            string[] drives = Environment.GetLogicalDrives();
+            string filepath = "";
+
+            foreach (string drive in drives)
+            {
+                try
+                {
+                    string rootPath = Path.GetPathRoot(drive);
+                    string[] files = Directory.GetFiles(rootPath, targetFileName, SearchOption.AllDirectories);
+
+                    foreach (string file in files)
+                    {
+                        MessageBox.Show("Znaleziono plik: " + file);
+                        filepath = file;
+                    }
+                }
+                catch (UnauthorizedAccessException)
+                {
+
+                }
+            }
+            return filepath;
         }
 
         private static string EffectSound_Cash_Path()
         {
-            string menuSoundPath = "\\Sounds\\Cash money.wav";
-            StringBuilder searchPath = SoundsPath();
-            searchPath.Append(menuSoundPath);
-            return searchPath.ToString();
+            //string menuSoundPath = "\\Sounds\\Cash money.wav";
+            //StringBuilder searchPath = SoundsPath();
+            //searchPath.Append(menuSoundPath);
+            //return searchPath.ToString();
+
+            string targetFileName = "Cash money.wav";
+            string[] drives = Environment.GetLogicalDrives();
+            string filepath = "";
+
+            foreach (string drive in drives)
+            {
+                try
+                {
+                    string rootPath = Path.GetPathRoot(drive);
+                    string[] files = Directory.GetFiles(rootPath, targetFileName, SearchOption.AllDirectories);
+
+                    foreach (string file in files)
+                    {
+                        MessageBox.Show("Znaleziono plik: " + file);
+                        filepath = file;
+                    }
+                }
+                catch (UnauthorizedAccessException)
+                {
+
+                }
+            }
+            return filepath;
         }
 
         private static string EffectSound_Bonk_Path()
         {
-            string menuSoundPath = "\\Sounds\\Bonk.wav";
-            StringBuilder searchPath = SoundsPath();
-            searchPath.Append(menuSoundPath);
-            return searchPath.ToString();
+            //string menuSoundPath = "\\Sounds\\Bonk.wav";
+            //StringBuilder searchPath = SoundsPath();
+            //searchPath.Append(menuSoundPath);
+            //return searchPath.ToString();
+            string targetFileName = "Bonk.wav";
+            string[] drives = Environment.GetLogicalDrives();
+            string filepath = "";
+
+            foreach (string drive in drives)
+            {
+                try
+                {
+                    string rootPath = Path.GetPathRoot(drive);
+                    string[] files = Directory.GetFiles(rootPath, targetFileName, SearchOption.AllDirectories);
+
+                    foreach (string file in files)
+                    {
+                        MessageBox.Show("Znaleziono plik: " + file);
+                        filepath = file;
+                    }
+                }
+                catch (UnauthorizedAccessException)
+                {
+
+                }
+            }
+            return filepath;
         }
     }
 }
