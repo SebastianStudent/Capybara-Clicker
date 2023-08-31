@@ -135,5 +135,10 @@
   <ItemGroup>
     <Resource Include="Images\WindowIcon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sounds\Bonk.wav" />
+    <Content Include="Sounds\Cash money.wav" />
+    <Content Include="Sounds\The Capybara Song Official Music Video.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

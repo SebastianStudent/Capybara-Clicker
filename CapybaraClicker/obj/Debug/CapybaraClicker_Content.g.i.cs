@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/windowicon.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sounds/bonk.wav")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sounds/cash%20money.wav")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sounds/the%20capybara%20song%20official%20music%20video.wav")]
 
 

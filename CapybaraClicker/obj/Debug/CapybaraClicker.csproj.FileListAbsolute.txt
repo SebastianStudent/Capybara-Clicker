@@ -17,3 +17,4 @@ D:\Wazne_pliki\Moje_kody_mój_świat\Programiki\CapybaraClicker\CapybaraClicker\
 D:\Wazne_pliki\Moje_kody_mój_świat\Programiki\CapybaraClicker\CapybaraClicker\obj\Debug\MyStyles.baml
 D:\Wazne_pliki\Moje_kody_mój_świat\Programiki\CapybaraClicker\CapybaraClicker\obj\Debug\SoundPanel.g.cs
 D:\Wazne_pliki\Moje_kody_mój_świat\Programiki\CapybaraClicker\CapybaraClicker\obj\Debug\SoundPanel.baml
+D:\Wazne_pliki\Moje_kody_mój_świat\Programiki\CapybaraClicker\CapybaraClicker\obj\Debug\CapybaraClicker_Content.g.cs

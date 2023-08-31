@@ -200,15 +200,11 @@ namespace CapybaraClicker
             }
         }
 
-        private static StringBuilder CursorImagePath([CallerFilePath] string CursorPath = "")
+        private static StringBuilder CursorImagePath()
         {
-            StringBuilder searchPath = new StringBuilder(CursorPath);
-            string fileName = Path.GetFileName(searchPath.ToString());
-            searchPath.Remove(searchPath.Length - fileName.Length - 1,
-                fileName.Length + 1);
-            searchPath.Remove(Path.GetDirectoryName(searchPath.ToString()).Length,
-                searchPath.Length - Path.GetDirectoryName(searchPath.ToString()).Length);
-            return searchPath;
+            StringBuilder Path = new StringBuilder(Environment.CurrentDirectory);
+            Path.Remove(Path.Length - 25, 25);
+            return Path;
         }
 
         private static string CursorImagePointPath()
